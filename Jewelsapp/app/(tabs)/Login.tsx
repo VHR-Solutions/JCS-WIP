@@ -6,9 +6,10 @@ import { useNavigation } from '@react-navigation/native';
 import React from 'react';
 import { View, Text, TextInput, TouchableOpacity, Image, StyleSheet } from 'react-native';
 
+type LoginScreenNavigationProp = NativeStackNavigationProp<  RootStackParamList,  'LoginApp'>;
 
 const loginApp: React.FC = () => {
-
+  const navigation = useNavigation<LoginScreenNavigationProp>();
   return (
     <View style={styles.container}>
  
@@ -38,8 +39,15 @@ const loginApp: React.FC = () => {
       </View>
       <TouchableOpacity style={styles.forgotPassword}>
         <Text style={styles.forgotPasswordText}>Forgot password ?</Text>
+      
+
+
       </TouchableOpacity>
-      <TouchableOpacity style={styles.loginButton}>
+      <TouchableOpacity style={styles.loginButton} onPress={() => 
+          {
+            console.log (' going to home page')
+
+            navigation.navigate('Home')}}>
         <Text style={styles.loginButtonText}>Login</Text>
       </TouchableOpacity>
 
@@ -143,3 +151,7 @@ const styles = StyleSheet.create({
 });
 
 export default loginApp;
+
+export type RootStackParamList={
+  LoginApp: undefined,
+}

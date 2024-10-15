@@ -2,8 +2,10 @@
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
+import { useNavigate } from 'react-router-dom';
 
 const App: React.FC = () => {
+  
   return (
     <View style={styles.container}>
       <View style={styles.header}>

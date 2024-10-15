@@ -4,15 +4,18 @@ import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView, Button, Pressable } from 'react-native';
 
-const App = () => {
+
+const Stack = createNativeStackNavigator();
+const mainpageApp = () => {
   function btnClick(){
-    const Stack = createNativeStackNavigator();
+    
  
   return (
+    console.log('this is from stack naviga'),
       <NavigationContainer>
           <Stack.Navigator >
               
-              <Stack.Screen name ="Goto Login" component={Login} />
+              <Stack.Screen name ="Login" component={Login} />
               
           </Stack.Navigator>
       </NavigationContainer>
@@ -21,6 +24,8 @@ const App = () => {
   )}
   
   return (
+    console.log('this is from index view naviga'),
+
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
       <Image
@@ -173,4 +178,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default mainpageApp;

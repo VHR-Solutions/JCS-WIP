@@ -33,4 +33,4 @@ const screens ={
 
 //const MainStack =  createStackNavigator(screens);
 
-//export default createAppContainer(MainStack);
+//export default App(MainStack);
