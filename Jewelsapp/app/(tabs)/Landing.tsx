@@ -2,14 +2,10 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
-<<<<<<< Updated upstream
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-=======
 import { NativeStackScreenProps } from '@react-navigation/native-stack';
 import { useNavigation } from 'expo-router';
 
 
->>>>>>> Stashed changes
 
 const App: React.FC = () => (
     <ScrollView contentContainerStyle={styles.container}>
@@ -20,7 +16,7 @@ const App: React.FC = () => (
             <Image
               style={styles.logo}
               //className="w-full flex-1"
-              source={require("C:/JewelsProj/Jewelsapp/assets/images/JCSLogo.png")}
+              source={require("C:/Users/Jeeva/VHR/First_Project/JewelsProj/Jewelsapp/assets/images/JCSLogo.png")}
             />
                 <Text style={styles.headerText}>Looking for gold and diamond jewellery? JCS has the best collection handcrafted jewellery.</Text>
             </View>

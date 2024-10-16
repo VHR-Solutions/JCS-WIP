@@ -20,7 +20,7 @@ const App: React.FC = () => {
         <Image
               style={styles.logo}
               //className="w-full flex-1"
-              source={require("C:/JewelsProj/Jewelsapp/assets/images/JCSLogo.png")}
+              source={require("C:/Users/Jeeva/VHR/First_Project/JewelsProj/Jewelsapp/assets/images/JCSLogo.png")}
             />
       </View>
       <View style={styles.formContainer}>

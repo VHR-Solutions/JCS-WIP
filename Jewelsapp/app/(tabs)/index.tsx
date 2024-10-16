@@ -3,31 +3,6 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView, Button, Pressable } from 'react-native';
-<<<<<<< Updated upstream
-
-
-const Stack = createNativeStackNavigator();
-const mainpageApp = () => {
-  function btnClick(){
-    
- 
-  return (
-    console.log('this is from stack naviga'),
-      <NavigationContainer>
-          <Stack.Navigator >
-              
-              <Stack.Screen name ="Login" component={Login} />
-              
-          </Stack.Navigator>
-      </NavigationContainer>
-    //console.log('button press event ;')
-
-  )}
-  
-  return (
-    console.log('this is from index view naviga'),
-
-=======
 import LandingApp from './Landing';
 
 
@@ -61,29 +36,21 @@ const mainpageApp: React.FC = () => {
 
   
   
-    console.log('this is from index view naviga'),
+ 
 
->>>>>>> Stashed changes
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
       <Image
               style={styles.logo}
               //className="w-full flex-1"
-              source={require("C:/JewelsProj/Jewelsapp/assets/images/JCSLogo.png")}
+              source={require("C:/Users/Jeeva/VHR/First_Project/JewelsProj/Jewelsapp/assets/images/JCSLogo.png")}
             />
         {/* <Text style={styles.title}>JCS</Text>
         <Text style={styles.subtitle}>Jewel Creations</Text> */}
       </View>
       <View style={styles.buttonContainer}>
-<<<<<<< Updated upstream
-       <Button title='Login' onPress={btnClick} />  
-    <Pressable  onPress={btnClick}>
-      {/* <Text> dkckjwcnkwjejcbjwebcn </Text> */}
-    </Pressable>
-=======
         
 
->>>>>>> Stashed changes
         <TouchableOpacity style={styles.signupButton}> 
           <Text style={styles.signupButtonText}>Sign up</Text>
         </TouchableOpacity>
@@ -113,12 +80,8 @@ const mainpageApp: React.FC = () => {
         </View>
       </View>
     </ScrollView>
-<<<<<<< Updated upstream
-  );
-=======
     </View>
   )
->>>>>>> Stashed changes
 };
 
 
