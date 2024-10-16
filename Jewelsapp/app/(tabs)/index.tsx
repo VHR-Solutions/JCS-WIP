@@ -3,6 +3,7 @@ import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
 import React from 'react';
 import { View, Text, Image, TouchableOpacity, StyleSheet, ScrollView, Button, Pressable } from 'react-native';
+<<<<<<< Updated upstream
 
 
 const Stack = createNativeStackNavigator();
@@ -26,6 +27,43 @@ const mainpageApp = () => {
   return (
     console.log('this is from index view naviga'),
 
+=======
+import LandingApp from './Landing';
+
+
+const Stack = createNativeStackNavigator();
+
+const mainpageApp: React.FC = () => {
+    
+ 
+    return (
+      <View>
+      <NavigationContainer   independent={true}>
+      <Stack.Navigator initialRouteName="LoginApp" >
+        <Stack.Screen name="Land"   component={LandingApp} options={{ headerShown: false }} />
+        {/* <Stack.Screen name="Details" component={DetailsScreen} />
+        <Stack.Screen name="Logindo" component={LoginScreenm} options={{ headerShown: false }} />
+        <Stack.Screen name="Forgot" component={ForgotScreen} options={{ headerShown: false }} />
+        <Stack.Screen name="NewUser" component={NewUser}  options={{ headerShown: false }}/>
+        <Stack.Screen name="otpver" component={otpver} options={{ headerShown: false }} />
+        <Stack.Screen name="Cong" component={Cong}  options={{ headerShown: false }}/>
+        <Stack.Screen name="passrec" component={passrec}  options={{ headerShown: false }}/>
+        <Stack.Screen name="PlanSelect" component={PlanSelect}  options={{ headerShown: false }}/>
+        <Stack.Screen name="Paypage" component={Paypage}  options={{ headerShown: false }}/>
+        <Stack.Screen name="Profpage" component={Profpage}  options={{ headerShown: false }}/> */}
+
+
+
+
+      </Stack.Navigator>
+    </NavigationContainer>
+  
+
+  
+  
+    console.log('this is from index view naviga'),
+
+>>>>>>> Stashed changes
     <ScrollView contentContainerStyle={styles.container}>
       <View style={styles.header}>
       <Image
@@ -37,10 +75,15 @@ const mainpageApp = () => {
         <Text style={styles.subtitle}>Jewel Creations</Text> */}
       </View>
       <View style={styles.buttonContainer}>
+<<<<<<< Updated upstream
        <Button title='Login' onPress={btnClick} />  
     <Pressable  onPress={btnClick}>
       {/* <Text> dkckjwcnkwjejcbjwebcn </Text> */}
     </Pressable>
+=======
+        
+
+>>>>>>> Stashed changes
         <TouchableOpacity style={styles.signupButton}> 
           <Text style={styles.signupButtonText}>Sign up</Text>
         </TouchableOpacity>
@@ -70,7 +113,12 @@ const mainpageApp = () => {
         </View>
       </View>
     </ScrollView>
+<<<<<<< Updated upstream
   );
+=======
+    </View>
+  )
+>>>>>>> Stashed changes
 };
 
 

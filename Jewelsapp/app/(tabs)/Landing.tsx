@@ -2,7 +2,14 @@
 import React from 'react';
 import { View, Text, Image, StyleSheet, ScrollView, TouchableOpacity } from 'react-native';
 import { FontAwesome } from '@expo/vector-icons';
+<<<<<<< Updated upstream
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+=======
+import { NativeStackScreenProps } from '@react-navigation/native-stack';
+import { useNavigation } from 'expo-router';
+
+
+>>>>>>> Stashed changes
 
 const App: React.FC = () => (
     <ScrollView contentContainerStyle={styles.container}>

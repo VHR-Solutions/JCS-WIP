@@ -9,13 +9,13 @@ const App: React.FC = () => (
         <View style={styles.header}>
             <FontAwesome name="bars" size={24} color="black" />
             <View style={styles.logoContainer}>
-        <Image source={{ uri: 'https://www.jcsjewellers.com/cdn/shop/t/2/assets/logo.png' }} style={styles.logo} />
-        <Image
-              style={{ resizeMode: "cover" }}
+        
+            <Image
+              style={styles.logo}
               //className="w-full flex-1"
-              source={require("@/assets/planes.png")}
+              source={require("C:/JewelsProj/Jewelsapp/assets/images/JCSLogo.png")}
             />
-                <Text style={styles.headerText}>Jewel Creations</Text>
+                <Text style={styles.headerText}>Looking for gold and diamond jewellery? JCS has the best collection handcrafted jewellery.</Text>
             </View>
             <View style={styles.notificationContainer}>
                 <FontAwesome name="bell" size={24} color="black" />
@@ -95,11 +95,11 @@ const styles = StyleSheet.create({
   logoContainer: {
     alignItems: 'center',
   },
-  logo: {
-    width: 100,
-    height: 100,
-    resizeMode:'contain',
-  },
+  logo: { 
+    resizeMode: "contain",
+     height:100,
+      width:100
+    },
   headerText: {
     fontSize: 18,
     fontWeight: 'bold',
