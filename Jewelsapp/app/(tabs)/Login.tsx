@@ -1,5 +1,5 @@
 
-import { RootStackParamList } from '@/app/(tabs)/types';
+//import { RootStackParamList } from '@/app/(tabs)/types';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { NativeStackNavigationProp } from '@react-navigation/native-stack';
 import { useNavigation } from '@react-navigation/native';
@@ -47,7 +47,7 @@ const loginApp: React.FC = () => {
           {
             console.log (' going to home page')
 
-            navigation.navigate('Home')}}>
+           navigation.navigate('Land')}}>
         <Text style={styles.loginButtonText}>Login</Text>
       </TouchableOpacity>
 
@@ -154,4 +154,5 @@ export default loginApp;
 
 export type RootStackParamList={
   LoginApp: undefined,
+  Land:undefined,
 }
