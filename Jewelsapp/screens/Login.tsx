@@ -8,7 +8,7 @@ type LoginScreenNavigationProp = NativeStackNavigationProp<
   RootStackParamList,
   'Login'
 >;
-const loginApp: React.FC = () => {
+const LoginApp: React.FC = () => {
   const navigation = useNavigation<LoginScreenNavigationProp>();
   console.log("from login app")
   return (
@@ -141,4 +141,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default loginApp;
+export default LoginApp;

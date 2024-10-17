@@ -1,9 +1,8 @@
-
 import React, { useState } from 'react';
 import { View, Text, TextInput, StyleSheet, TouchableOpacity, Image, ScrollView } from 'react-native';
 import { Picker } from '@react-native-picker/picker';
 
-const App: React.FC = () => {
+const Joinsch = ({navigation}) => {
   const [purchasePlan, setPurchasePlan] = useState<string>('');
   const [amount, setAmount] = useState<string>('');
   const [branch, setBranch] = useState<string>('');
@@ -69,7 +68,7 @@ const App: React.FC = () => {
         <Text style={styles.label}>Email*</Text>
         <TextInput style={styles.input} placeholder="abc@abc.com" />
         <View style={styles.buttonContainer}>
-          <TouchableOpacity style={styles.submitButton}>
+          <TouchableOpacity style={styles.submitButton} onPress={()=>navigation.navigate("Paynow")}>
             <Text style={styles.submitButtonText}>Submit</Text>
           </TouchableOpacity>
           <TouchableOpacity style={styles.clearButton}>
@@ -84,7 +83,7 @@ const App: React.FC = () => {
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: '#f7f7f7',
+    backgroundColor: '#fcfcfc',
     padding: 16,
   },
   header: {
@@ -190,4 +189,4 @@ const styles = StyleSheet.create({
   },
 });
 
-export default App;
+export default Joinsch

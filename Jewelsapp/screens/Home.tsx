@@ -10,25 +10,7 @@ import {
   Pressable,
 } from "react-native";
 
-const linking = {
-    prefixes: ['myapp://', 'https://myapp.com'], // Customize the URL prefix for your app
-    config: {
-      screens: {
-        Home: 'landing', // Maps to the root URL
-        Details: 'details', // Maps to /details
-        Logindo: 'login', // Maps to /login
-        Forgot: 'forgot-password', // Maps to /forgot-password
-        NewUser: 'new-user', // Maps to /new-user
-        otpver: 'otp-ver', // Maps to /otp-ver
-        Cong:'success',
-        passrec:'passreset',
-        PlanSelect:'Purchase-plan',
-        Paypage:'Payment-gateway',
-        Profpage:'Profile-screen',
-        CreateAccount:'CreateAccount'
-      },
-    },
-  };
+
 const Home = ({navigation}) => {
 return(
     <ScrollView contentContainerStyle={styles.container}>
@@ -36,7 +18,7 @@ return(
       <Image
               style={styles.logo}
               //className="w-full flex-1"
-              source={require("C:/Users/Jeeva/VHR/First_Project/JewelsProj/Jewelsapp/assets/images/JCSLogo.png")}
+              source={require("C:/Users/Admin/VHR/Working/JewelsProj/Jewelsapp/assets/images/JCSLogo.png")}
             />
         {/* <Text style={styles.title}>JCS</Text>
         <Text style={styles.subtitle}>Jewel Creations</Text> */}
