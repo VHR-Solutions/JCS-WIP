@@ -163,6 +163,7 @@ const mainpageApp: React.FC = () => {
   return (
     <NavigationContainer independent={true}>
       <DrawerNavigation />
+
       
       <View style={styles.notificationContainer}>
                 <FontAwesome name="bell" size={24} color="black" />
