@@ -8,7 +8,7 @@ import {
   Alert,
 } from 'react-native';
 
-const App: React.FC = () => {
+const App: React.FC = ( navigation ) => {
   const [code, setCode] = useState(['', '', '', '', '', '']);
 
   const handlePress = (key: string) => {
@@ -60,7 +60,7 @@ const App: React.FC = () => {
       <TouchableOpacity style={styles.deleteButton} onPress={handleDelete}>
         <Text style={styles.deleteButtonText}>Delete</Text>
       </TouchableOpacity>
-      <TouchableOpacity style={styles.verifyButton} onPress={handleVerify}>
+      <TouchableOpacity style={styles.verifyButton} onPress={() => { handleVerify(); navigation.navigate("Success");}}>
         <Text style={styles.verifyButtonText}>Verify</Text>
       </TouchableOpacity>
     </View>

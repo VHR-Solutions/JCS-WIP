@@ -19,6 +19,8 @@ import LandingApp from "@/screens/Landing";
 import Homescreen from "@/screens/Home";
 import CreateAccountApp from "@/screens/CreateAccount";
 import ProfileScreenApp from "@/screens/ProfileScreen";
+import Success from "@/screens/Congrats";
+import Joinsch from "@/screens/PlanDetails";
 const Stack = createNativeStackNavigator();
 const Drawer = createDrawerNavigator();
 
@@ -32,7 +34,7 @@ const CustomDrawerContent = (props) => {
       <DrawerItem
         
         label="About Us"
-        onPress={() => props.navigation.navigate('')} 
+        onPress={() => props.navigation.navigate('CreateAccount')} 
         icon={({ focused }) => (
           <MaterialIcons name="keyboard-arrow-right" size={22} color={focused ? '#000' : '#172743'} />
         )}
@@ -75,6 +77,7 @@ const MainStack = () => {
     <Stack.Navigator initialRouteName="Home">
       <Stack.Screen name="Home" component={Homescreen} options= {{headerShown:false}} />
       <Stack.Screen name="CreateAccount" component={CreateAccountApp} />
+      <Stack.Screen name="Success" component={Success} />
       {/* Add other stack screens here */}
     </Stack.Navigator>
   );
@@ -114,7 +117,7 @@ const DrawerNavigation = () => {
       />
       <Drawer.Screen 
        name="Join Scheme"
-       component={LandingApp} 
+       component={Joinsch} 
        options={{
         drawerIcon: ({ focused }) => (
           <FontAwesome5 name="hand-holding-usd" size={18} color={focused ? '#000' : '#172743'} />
@@ -160,6 +163,12 @@ const mainpageApp: React.FC = () => {
   return (
     <NavigationContainer independent={true}>
       <DrawerNavigation />
+      <View style={styles.notificationContainer}>
+                <FontAwesome name="bell" size={24} color="black" />
+                <View style={styles.notificationBadge}>
+                    <Text style={styles.notificationText}>6</Text>
+                </View>
+            </View>
     </NavigationContainer>
   );
 };
@@ -184,6 +193,21 @@ const styles = StyleSheet.create({
     marginVertical: 5,
     fontSize: 14,
     color: '#555',
+  },
+  notificationContainer: {
+    position: 'relative',
+  },
+  notificationBadge: {
+    position: 'absolute',
+    top: -4,
+    right: -4,
+    backgroundColor: '#FF0000',
+    borderRadius: 8,
+    paddingHorizontal: 4,
+  },
+  notificationText: {
+    color: 'white',
+    fontSize: 10,
   },
 });
 

@@ -6,8 +6,8 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 const App: React.FC = () => (
     <ScrollView contentContainerStyle={styles.container}>
-        <View style={styles.header}>
-            <FontAwesome name="bars" size={24} color="black" />
+        <View>
+            
             <View style={styles.logoContainer}>
         
             <Image
@@ -17,12 +17,7 @@ const App: React.FC = () => (
             />
                 <Text style={styles.headerText}>Looking for gold and diamond jewellery? JCS has the best collection handcrafted jewellery.</Text>
             </View>
-            <View style={styles.notificationContainer}>
-                <FontAwesome name="bell" size={24} color="black" />
-                <View style={styles.notificationBadge}>
-                    <Text style={styles.notificationText}>6</Text>
-                </View>
-            </View>
+            
         </View>
         <Text style={styles.updateText}>Rate updated on 10:55 AM 27-Aug-2024</Text>
         <View style={styles.rateContainer}>
@@ -81,14 +76,14 @@ const App: React.FC = () => (
 const styles = StyleSheet.create({
   container: {
     flexGrow: 1,
-    backgroundColor: '#F3F4F6',
+    backgroundColor: '#fcfcfc',
     padding: 16,
   },
   header: {
     flexDirection: 'row',
     justifyContent: 'space-between',
     alignItems: 'center',
-    backgroundColor: '#FFFBEB',
+    backgroundColor: '#fcfcfc',
     padding: 16,
     borderRadius: 8,
   },
